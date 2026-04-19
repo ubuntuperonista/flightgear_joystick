@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+  <name type="string">Microsoft SideWinder Joystick</name>
+  <axis>
+    <desc type="string">Aileron</desc>
+    <binding>
+      <command type="string">property-scale</command>
+      <property type="string">/controls/flight/aileron</property>
+#power 3.3
+      <power type="int">3.3</power>
+      <factor type="double">1</factor>
+      <offset type="double">0</offset>
+      <squared type="bool">true</squared>
+    </binding>
+  </axis>
+  <axis n="1">
+    <desc type="string">Elevator</desc>
+    <binding>
+      <command type="string">property-scale</command>
+      <property type="string">/controls/flight/elevator</property>
+#power 3.3
+      <power type="int">3.3</power>
+      <factor type="double">-1</factor>
+      <offset type="double">0</offset>
+      <squared type="bool">true</squared>
+    </binding>
+  </axis>
+  <axis n="2">
+    <desc type="string">Throttle</desc>
+    <binding>
+      <command type="string">nasal</command>
+      <script type="string">controls.throttleAxis();</script>
+      <squared type="bool">false</squared>
+    </binding>
+  </axis>
+  <button>
+    <desc type="string">Flaps Up</desc>
+    <repeatable type="string">false</repeatable>
+    <binding>
+      <command type="string">nasal</command>
+      <script type="string">controls.flapsDown(-1);</script>
+    </binding>
+    <mod-up>
+      <binding>
+        <command type="string">nasal</command>
+        <script type="string">controls.flapsDown(0);</script>
+      </binding>
+    </mod-up>
+  </button>
+  <button n="1">
+    <desc type="string">Flaps Down</desc>
+    <repeatable type="string">false</repeatable>
+    <binding>
+      <command type="string">nasal</command>
+      <script type="string">controls.flapsDown(1);</script>
+    </binding>
+    <mod-up>
+      <binding>
+        <command type="string">nasal</command>
+        <script type="string">controls.flapsDown(0);</script>
+      </binding>
+    </mod-up>
+  </button>
+  <button n="2">
+    <desc type="string">Aileron Trim Left</desc>
+    <binding>
+      <command type="string">nasal</command>
+      <script type="string">controls.aileronTrim(-1);</script>
+    </binding>
+    <repeatable type="double">1</repeatable>
+  </button>
+  <button n="3">
+    <desc type="string">Aileron Trim Right</desc>
+    <binding>
+      <command type="string">nasal</command>
+      <script type="string">controls.aileronTrim(1);</script>
+    </binding>
+    <repeatable type="double">1</repeatable>
+  </button>
+  <button n="4">
+    <desc type="string">Rudder Trim Right</desc>
+    <binding>
+      <command type="string">nasal</command>
+      <script type="string">controls.rudderTrim(1);</script>
+    </binding>
+    <repeatable type="double">1</repeatable>
+  </button>
+  <button n="5">
+    <desc type="string">Elevator Trim Down</desc>
+    <binding>
+      <command type="string">nasal</command>
+      <script type="string">controls.elevatorTrim(1);</script>
+    </binding>
+    <repeatable type="double">1</repeatable>
+  </button>
+  <button n="6">
+    <desc type="string">Rudder Trim Left</desc>
+    <binding>
+      <command type="string">nasal</command>
+      <script type="string">controls.rudderTrim(-1);</script>
+    </binding>
+    <repeatable type="double">1</repeatable>
+  </button>
+  <button n="7">
+    <desc type="string">Elevator Trim Up</desc>
+    <binding>
+      <command type="string">nasal</command>
+      <script type="string">controls.elevatorTrim(-1);</script>
+    </binding>
+    <repeatable type="double">1</repeatable>
+  </button>
+</PropertyList>
