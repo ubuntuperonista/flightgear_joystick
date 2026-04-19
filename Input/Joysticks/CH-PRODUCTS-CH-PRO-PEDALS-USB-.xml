@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+  <name type="string">CH PRODUCTS CH PRO PEDALS USB </name>
+  <axis>
+    <desc type="string">Brake Left</desc>
+    <dead-band type="double">0.07</dead-band>
+    <binding>
+      <command type="string">property-scale</command>
+      <property type="string">/controls/gear/brake-left</property>
+      <factor type="double">1</factor>
+#power orig int 1
+      <power type="double">1.5</power>
+      <offset type="double">1</offset>
+      <squared type="bool">false</squared>
+    </binding>
+  </axis>
+  <axis n="1">
+    <desc type="string">Brake Right</desc>
+    <dead-band type="double">0.07</dead-band>
+    <binding>
+      <command type="string">property-scale</command>
+      <property type="string">/controls/gear/brake-right</property>
+      <factor type="double">1</factor>
+#power int 1
+      <power type="double">1.5</power>
+      <offset type="double">1</offset>
+      <squared type="bool">false</squared>
+    </binding>
+  </axis>
+  <axis n="2">
+    <desc type="string">Rudder</desc>
+#deadband 0.00047
+    <dead-band type="double">0.03</dead-band>
+    <binding>
+      <command type="string">property-scale</command>
+      <property type="string">/controls/flight/rudder</property>
+#factor 1
+      <factor type="double">1</factor>
+# power 4.5
+      <power type="int">3.3</power>
+      <offset type="double">0</offset>
+      <squared type="bool">true</squared>
+    </binding>
+  </axis>
+</PropertyList>
