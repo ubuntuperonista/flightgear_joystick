@@ -1,5 +1,39 @@
 <?xml version="1.0"?>
 
+<!--
+************************************************************************
+*
+* Bindings or Thrustmaster T.16000M USB joystick (see joysticks.xml in fgfsbase dir)
+* by ~peron
+*
+* Axis 0: ailerons
+* Axis 1: elevator
+* Axis 2: rudder (twistable stick)
+* Axis 3: throttle
+* Axis 4: Horizontal Hat
+* Axis 5: Vertical Hat
+* Axis 6: view left/right
+* Axis 7: view Up/down
+*
+* Button 0: (fire) Flaps Up
+* Button 1: Flaps Down
+* Button 4: Rudder Trim left
+* Button 9: View Cycle Forward
+* Button 10: Mixture Rich
+* Button 15: Mixture Lean
+* Button 2: Aileron Trim left
+* Button 3: Aileron Trim right
+* Button 5: Rudder Trim right
+* Button 8: View Cycle Backwards
+* Button 6: Elevator Trim Down
+* Button 7: Elevator Trim Up
+* Button 12: View Decrease
+* Button 13: View Increase
+* Button 11: Propeller fine
+* Button 14: Propeller Coarse
+************************************************************************
+-->
+
 <PropertyList>
   <name type="string">Thrustmaster T.16000M</name>
   <axis>
@@ -14,6 +48,16 @@
 #      <power type="double">1</power>
     </binding>
   </axis>
+  <axis n="2">
+    <desc type="string">Rudder</desc>
+    <binding>
+      <command type="string">property-scale</command>
+      <property type="string">/controls/flight/rudder</property>
+      <dead-band type="double">0.02</dead-band>
+      <factor type="double">1</factor>
+      <offset type="double">0</offset>
+      <power type="double">1</power>
+    </binding>
   <axis n="1">
     <desc type="string">Elevator</desc>
     <binding>
