@@ -1,5 +1,7 @@
 # Joystick configurations for Flightgear
 
+These files may be included on ~/.fgfs/Input/Joysticks/
+
 ## CH Rudder pedals
   * Original Settings
   * My settings
