@@ -4,7 +4,7 @@
   * Original Settings
   * My settings
 
-## Microsoft Sidewinder
+## Microsoft Sidewinder USB ("92626" serial number)
   * Original Setting
   * My settings
 
